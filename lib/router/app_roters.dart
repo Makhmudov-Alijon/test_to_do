@@ -5,4 +5,5 @@ class AppRouters{
   static const String meting='/meting';
   static const String study='/study';
   static const String home='/home';
+  static const String register='/register';
 }

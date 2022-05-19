@@ -24,7 +24,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   var b = ''.obs;
-
+  final Box box =Hive.box('user');
   // show time picker method
   String? _selectedTime;
 
@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                           Container(
                             alignment: Alignment(-0.9, -0.6),
                             child: Text(
-                              "Hello Brenda!",
+                              "Hello ${box.get('key')} !",
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
@@ -275,11 +275,11 @@ class _HomeState extends State<Home> {
                           height: 8.h,
                           width: 90.w,
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Colors.deepPurple,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10))),
                           child: Center(
-                            child: Text('Add task'),
+                            child: Text('Add task',style: TextStyle(color: Colors.white),),
                           )),
                       onTap: () {
                         controller.addTask(_selectedTime ?? '');

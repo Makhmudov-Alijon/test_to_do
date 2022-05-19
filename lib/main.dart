@@ -23,6 +23,7 @@ void main() async{
   };
   await Hive.initFlutter();
   await Hive.openBox('task');
+  await Hive.openBox('user');
   runApp(const MyApp());
 }
 
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          initialRoute: AppRouters.home,
+          initialRoute: AppRouters.register,
           getPages: AppPages.pages,
         );
       },
