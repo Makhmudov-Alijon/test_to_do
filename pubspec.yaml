@@ -40,7 +40,7 @@ dependencies:
   hexcolor: ^2.0.6
   json_annotation:
   json_serializable:
-  responsive_sizer: ^3.0.5+1
+  sizer: ^2.0.15
   solid_bottom_sheet: ^0.1.10
   flutter_alarm_clock: ^0.0.2
   flutter_slidable: ^1.2.0
