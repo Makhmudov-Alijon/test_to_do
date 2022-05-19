@@ -46,75 +46,93 @@ class _HomeMenuState extends State<HomeMenu> {
               endActionPane: ActionPane(
                 motion: const ScrollMotion(),
                 children: [
-                  SlidableAction(
-                    backgroundColor: Colors.deepPurple,
-                    foregroundColor: Colors.white,
-                    icon: Icons.edit,
-                    label: 'Edit',
-                    onPressed: (BuildContext context) {
-                      _toDo.textFieldController.text = taskModel.title;
-                      Get.defaultDialog(
-                          content: Column(
-                            children: [
-                              TextField(
-                                controller: _toDo.textFieldController,
-                              ),
-                              SizedBox(
-                                height: 1.h,
-                              ),
-                              Row(
-                                children: [
-                                  GestureDetector(
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 2.h),
-                                      height: 5.h,
-                                      width: 10.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(2.h),
-                                        color: Colors.green,
-                                      ),
-                                      child: Center(
-                                        child: Text('Cancel'),
-                                      ),
-                                    ),
-                                    onTap: () {
-                                      Get.back();
-                                    },
-                                  ),
-                                  SizedBox(
-                                    width: 8.h,
-                                  ),
-                                  GestureDetector(
-                                    child: Container(
-                                      height: 5.h,
-                                      width: 10.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(2.h),
-                                        color: Colors.red,
-                                      ),
-                                      child: Center(
-                                        child: Text('Save'),
-                                      ),
-                                    ),
-                                    onTap: () {
-                                      _toDo.editTAsk(index);
-                                      Get.back();
-                                    },
-                                  ),
-                                ],
-                              )
-                            ],
-                          ));
-                    },
+                  SizedBox(width: 3.w,),
+                  Slidable(
+                    closeOnScroll: true,
+                   child: GestureDetector(
+                     child: Container(
+                       height: 9.h,
+                       width: 20.w,
+                       decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(4.w),
+                         color: Colors.deepPurple
+                       ),
+                       child: Icon(Icons.edit,color: Colors.white,),
+                     ),
+                     onTap: (){
+                       _toDo.textFieldController.text = taskModel.title;
+                       Get.defaultDialog(
+                           content: Column(
+                             children: [
+                               TextField(
+                                 controller: _toDo.textFieldController,
+                               ),
+                               SizedBox(
+                                 height: 1.h,
+                               ),
+                               Row(
+                                 children: [
+                                   GestureDetector(
+                                     child: Container(
+                                       margin: EdgeInsets.only(left: 2.h),
+                                       height: 5.h,
+                                       width: 10.h,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(2.h),
+                                         color: Colors.green,
+                                       ),
+                                       child: Center(
+                                         child: Text('Cancel'),
+                                       ),
+                                     ),
+                                     onTap: () {
+                                       Get.back();
+                                     },
+                                   ),
+                                   SizedBox(
+                                     width: 8.h,
+                                   ),
+                                   GestureDetector(
+                                     child: Container(
+                                       height: 5.h,
+                                       width: 10.h,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(2.h),
+                                         color: Colors.red,
+                                       ),
+                                       child: Center(
+                                         child: Text('Save'),
+                                       ),
+                                     ),
+                                     onTap: () {
+                                       _toDo.editTAsk(index);
+                                       Get.back();
+                                     },
+                                   ),
+                                 ],
+                               )
+                             ],
+                           ));
+                     },
+                   ),
                   ),
-                  SlidableAction(
-                    onPressed: (BuildContext context) {
-                      _toDo.deleteTask(index);
-                    },
-                    backgroundColor: Colors.red,
-                    foregroundColor: Colors.white,
-                    icon: Icons.delete,
-                    label: 'Delete',
+                  SizedBox(width: 3.w,),
+                  Slidable(
+                    closeOnScroll: true,
+                   child: GestureDetector(
+                     child: Container(
+                       height: 9.h,
+                       width: 20.w,
+                       decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(4.w),
+                           color: Colors.deepPurple
+                       ),
+                       child: Icon(Icons.delete,color: Colors.white,),
+                     ),
+                     onTap: (){
+                       _toDo.deleteTask(index);
+                     },
+                   ),
                   ),
                 ],
               ),

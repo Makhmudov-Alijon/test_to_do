@@ -86,21 +86,14 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           Container(
-                            alignment: Alignment(-0.9, -0.7),
+                            alignment: Alignment(-0.9, -0.6),
                             child: Text(
                               "Hello Brenda!",
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
                           ),
-                          Container(
-                            alignment: Alignment(-0.9, -0.55),
-                            child: Text(
-                              "Today 7 Task Add",
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
-                            ),
-                          ),
+
                           Align(
                             alignment: Alignment(.85, -.57),
                             child: Container(
@@ -192,7 +185,7 @@ class _HomeState extends State<Home> {
             items: [
               BottomNavigationBarItem(
                   icon: Icon(
-                    Icons.home,
+                    Icons.home_filled,
                   ),
                   label: "home"),
               BottomNavigationBarItem(icon: Icon(Icons.menu), label: "menu")
