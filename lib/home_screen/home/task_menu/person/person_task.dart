@@ -197,23 +197,13 @@ class PersonTask extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 5.w,
-
+                margin: EdgeInsets.only(), width: 5.w,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(3.h),
-                ),
-                child: Expanded(
-
-                  child: Container(
-                    margin: EdgeInsets.only(),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(3.w),
-                        bottomLeft: Radius.circular(3.w),
-                      ),
-                      color: HexColor(taskModel.color ?? '#FFFFFF'),
-                    ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(3.w),
+                    bottomLeft: Radius.circular(3.w),
                   ),
+                  color: HexColor(taskModel.color ?? '#FFFFFF'),
                 ),
               ),
               Container(

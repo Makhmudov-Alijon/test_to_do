@@ -36,14 +36,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   hive:
   hive_flutter:
-  get: ^4.6.1
-  hexcolor: ^2.0.6
+  get:
+  hexcolor:
   json_annotation:
   json_serializable:
-  sizer: ^2.0.15
-  solid_bottom_sheet: ^0.1.10
-  flutter_alarm_clock: ^0.0.2
-  flutter_slidable: ^1.2.0
+  sizer:
+  solid_bottom_sheet:
+  flutter_alarm_clock:
+  flutter_slidable:
 
 
 dev_dependencies:

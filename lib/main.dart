@@ -11,16 +11,7 @@ import 'package:test_to_do/router/app_roters.dart';
 
 
 void main() async{
-  WidgetsFlutterBinding.ensureInitialized(); //imp line need to be added first
 
-  FlutterError.onError = (FlutterErrorDetails details) {
-    //this line prints the default flutter gesture caught exception in console
-    //FlutterError.dumpErrorToConsole(details);
-    print("Error From INSIDE FRAME_WORK");
-    print("----------------------");
-    print("Error :  ${details.exception}");
-    print("StackTrace :  ${details.stack}");
-  };
   await Hive.initFlutter();
   await Hive.openBox('task');
   await Hive.openBox('user');
